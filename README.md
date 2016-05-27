@@ -1,10 +1,12 @@
 # Nightmare Gremlins
 [Gremlin.js](https://github.com/marmelab/gremlins.js) actions for [Nightmare.js](https://github.com/segmentio/nightmare) to allow for monkey testing
 
+![Running Gremlins in Nightmare](/example.gif)
+
 ## Introduction
 Nightmare Gremlins is an action and collection of tasks for Nightmare.js that allows for monkey testing via the [Electron](http://electron.atom.io/) app.
 
-There are two ways to use this npm: 
+There are two ways to use this npm:
 
 1) Singular action that extends the Nightmare prototype via `Nightmare.action`
 

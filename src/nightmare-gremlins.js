@@ -83,9 +83,11 @@ export function unleashGremlins(options = {}) {
   };
 }
 
-export default function task(options = {}) {
+export default function task(_options = {}) {
   // eslint-disable-next-line no-param-reassign
-  return function executeTask(done) {
+  return function executeTask(done, _runOptions) {
+    const options = Object.assign({}, _options, _runOptions);
+
     this
       .use(unleashGremlins(options))
       .then(done.bind(null, null));

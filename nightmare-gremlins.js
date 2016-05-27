@@ -112,10 +112,12 @@ function unleashGremlins() {
 }
 
 function task() {
-  var options = arguments.length <= 0 || arguments[0] === undefined ? {} : arguments[0];
+  var _options = arguments.length <= 0 || arguments[0] === undefined ? {} : arguments[0];
 
   // eslint-disable-next-line no-param-reassign
-  return function executeTask(done) {
+  return function executeTask(done, _runOptions) {
+    var options = (0, _assign2.default)({}, _options, _runOptions);
+
     this.use(unleashGremlins(options)).then(done.bind(null, null));
   };
 }
