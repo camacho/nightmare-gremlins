@@ -66,9 +66,14 @@ export function waitForGremlins(errors, _options = {}) {
   };
 }
 
-export function unleashGremlins(options = {}) {
-  // eslint-disable-next-line no-param-reassign
-  options.seed = options.seed || Date.now();
+export function unleashGremlins(_options = {}) {
+  const options = Object.assign(
+    {},
+    defaults.unleash,
+    { seed: Date.now() },
+    _options
+  );
+
   const errors = [];
 
   return function executeUnleashGremlins(nightmare) {
@@ -84,7 +89,6 @@ export function unleashGremlins(options = {}) {
 }
 
 export default function task(_options = {}) {
-  // eslint-disable-next-line no-param-reassign
   return function executeTask(done, _runOptions) {
     const options = Object.assign({}, _options, _runOptions);
 

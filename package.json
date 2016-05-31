@@ -1,6 +1,6 @@
 {
   "name": "nightmare-gremlins",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Monkey testing via Gremlins.js for Nightmare.js",
   "main": "nightmare-gremlins.js",
   "scripts": {
